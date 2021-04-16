@@ -1,0 +1,109 @@
+COMANDOS
+
+
+
+
+git init: lo usamos para determinar la carpeta en la que vamos a trabajar.
+git status: lo usamos para saber si tenemos un archivo añadido o borrado en nuestro proyecto, para saber en la rama en la que estamos y si tenemos commits.
+git add: es para añadir un archivo a nuestra rama seguidamente ponemos entre comillas el nombre de nuestro archivo o poner un punto para añadir todos los archios de nuestra carpeta.
+git rm: lo usamos para borrar un archivo que hayamos añadido, para eliminarlo por completo de nuestra rama usamosgit rm --cached.
+git commit: se usa para añadir un commit a nuestra rama, también podemos ponerle un -m seguidamente ponemos entre comillas nuestro ensaje.
+git config: muestra configuraciones de git también podemos usar –list para mostrar la configuración por defecto de nuestro git y si añadimos --show-origin inhales nos muestra las configuraciones guardadas y su ubicación.
+git config --global user.name: cambia de manera global el nombre del usuario, seguidamente ponemos entre comillas nuestro nombre.
+git config --global user.email: cambia de manera global el email del usuario, seguidamente ponemos entre comillas nuestro nombre.
+git log: se usa para ver la historia de nuestros archivos, los commits, el usuario que lo cambió, cuando se realizaron los cambios etc. seguidamente ponemos el nombre de nuestro archivo.
+
+git rm --cached: Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.
+git rm --force: Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).
+
+git reset --soft: Borramos todo el historial y los registros de Git pero guardamos los cambios que tengamos en Staging, así podemos aplicar las últimas actualizaciones a un nuevo commit.
+git reset --hard: Borra todo. Todo todito, absolutamente todo. Toda la información de los commits y del área de staging se borra del historial.
+git reset HEAD: Este es el comando para sacar archivos del área de Staging. No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto.
+
+git clone url_del_servidor_remoto: Nos permite descargar los archivos de la última versión de la rama principal y todo el historial de cambios en la carpeta .git.
+git push: Luego de hacer git add y git commit debemos ejecutar este comando para mandar los cambios al servidor remoto.
+git fetch: Lo usamos para traer actualizaciones del servidor remoto y guardarlas en nuestro repositorio local (en caso de que hayan, por supuesto).
+git merge: También usamos el comando git merge con servidores remotos. Lo necesitamos para combinar los últimos cambios del servidor remoto y nuestro directorio de trabajo.
+git pull: Básicamente, git fetch y git merge al mismo tiempo.
+
+
+Directorio de trabajo | preparacion o staing | repositirio local || repositirio remoto
+
+git init [iniciar el repositorio]
+git add biografia.txt [añadir el archivo]
+git commit -m “version 1” [guardar en la base de datos del repositorio]
+git add . [añadir todos los cambios hechos a la base de datos del repositorio]
+git commit -m “Cambios a v1” [guadar los cambios en la db del repositorio]
+git status [muestra el estado de los archivos de la base de datos]
+git show [cambios que se han hecho]
+git log biografia.txt [muestra el historial de cambios de un archivo]
+git push [enviar hacia otro repositorio remoto lo que yo estoy haciendo]
+git pull [permite traer de cualquier repositorio remoto combinando dos comandos 28. y 29.]
+git status [estado del proyecto en este momento]
+git rm historia.txt [devolver el comando 2. y 13. ]
+git rm --cached historia.txt [descachearlo lo de debaja en la ram “ya no 😃” ligado al comando 12.]
+git commit -m “primer commit” [realizar un cambio, ya para guardar]
+git config [todas las configuraciones de git]
+git config --list [ver la configuracion de git]
+git config --list --show-origin [ver donde esta ubicado los archivos de configuracion]
+git config --global user.name “Andres Leon” [colocarle un nombre para saber quien esta haciendo cambios]
+git config --global user.email "dandresleon64@gmail.com" [colocarle un email para saber quien esta haciendo cambios]
+git log historia.txt [ver el historial de este archivo]
+git show historia.txt [ver las modificaciones que han existido]
+git commit [cuando se va sin mensaje el lo pide y la forma de salir es "comandos 17. " y para empezar a escribir dentro de “vi” 18. ]
+git diff 3f9221603091ac205cea6fa2f88710da3857a482 e549b6799aa407cfbb7034c22b817577c85c44dc [compara dos commit]
+git reset effa0d5de0734e75a7aa0186a36d36b218c45865 --hard [la version a la que quiero volver]
+git log --stat [ver los cambios del historial mas detallado, con la letra “q me pueda salir si lo que se muestra es muy largo”]
+git checkout e549b6799aa407cfbb7034c22b817577c85c44dc historia.txt [checar un commit anterior y se quiere se hace un reeemplazo con el comando 04. y 05.]
+git checkout master [checar el ultimo commit]
+git fetch [actualizar mi repositirio local con los cambios subidos en el remoto]
+git merge [combinar lo del repositorio remoto con mi directorio de trabajo || combinar ramas]
+git commit -a -m “se modifico algo” [aplicar 04. y 05. en un solo comando]
+git branch cabecera [crear una rama]
+git checkout cabecera [cambiar entre ramas]
+git branch [saber que ramas existen]
+------------------------comandos en la consola y navegacion----------------------
+
+pwd [en donde estoy parado]
+mkdir [crear una carpeta]
+cat nombre_del_archivo.txt [ver el contenido de un archivo]
+cd [navegar entre carpetas]
+rm [borrar una carpeta o archivo]
+ls [listar todo en donde este parado en el sistema]
+ls -al [listar con argumentos]
+clear [limpiar la consola de git]
+cd [entrar a una carpeta]
+cd … [devolverme o salir de esta carpeta]
+cd /c [ir a un disco en especifico]
+history [ultimos comandos que he ingresado]
+para escoger alguno de la lista que aparece !25
+touch vacio.txt [crear un archivo vacio]
+rm --help [ayuda de como funciona cada comando “rm” puede ser diferente]
+code historia.txt [iniciar este archivo con vs]
+esc pausa y ingresar shif + z + z [para guardar y salir de “vi”]
+espace + i [para poder empezar a escribir en “vi”]
+
+
+
+
+
+
+
+GIT LOG COMANDOS PARA GITHUB
+    git log --oneline - Te muestra el id commit y el título del commit.
+    git log --decorate- Te muestra donde se encuentra el head point en el log.
+    git log --stat - Explica el número de líneas que se cambiaron brevemente.
+    git log -p- Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.
+    git shortlog - Indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus commits.
+    git log --graph --oneline --decorate y
+    git log --pretty=format:"%cn hizo un commit %h el dia %cd" - Muestra mensajes personalizados de los commits.
+    git log -3 - Limitamos el número de commits.
+    git log --after=“2018-1-2” ,
+    git log --after=“today” y
+    git log --after=“2018-1-2” --before=“today” - Commits para localizar por fechas.
+    git log --author=“Name Author” - Commits realizados por autor que cumplan exactamente con el nombre.
+    git log --grep=“INVIE” - Busca los commits que cumplan tal cual está escrito entre las comillas.
+    git log --grep=“INVIE” –i- Busca los commits que cumplan sin importar mayúsculas o minúsculas.
+    git log – index.html- Busca los commits en un archivo en específico.
+    git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.
+    git log > log.txt - guardar los logs en un archivo txt
